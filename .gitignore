@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+
+# logs and temp files
+*.log
+.DS_Store
+Thumbs.db
+
+# local captures / scratch output
+*.har
+*.trace.zip
+playwright-report/
+test-results/
