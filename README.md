@@ -21,6 +21,7 @@
 [![KTX2](https://img.shields.io/badge/textures-KTX2%20%2B%20Basis-22c55e?style=for-the-badge)](#-the-stack-observed-in-the-bundle)
 [![Audio](https://img.shields.io/badge/audio-18%20OGG%20tracks-f59e0b?style=for-the-badge)](#-asset-ledger)
 [![Node](https://img.shields.io/badge/runtime-Node.js%2018%2B-339933?style=for-the-badge&logo=node.js&logoColor=white)](#-quick-start)
+[![Live](https://img.shields.io/badge/live-vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://igloo-inc-recreation.vercel.app)
 
 <img src="docs/preview.png" alt="The igloo scene rendering locally at 1280x720" width="900" />
 
@@ -55,6 +56,19 @@ seek, sends `Cache-Control: no-cache` while you poke at things, and falls back t
 
 > **Run it from the repository root.** The server resolves `recreation/` relative to
 > the current working directory, and the app requests assets from `/assets/...`.
+
+### ▲ Or use the hosted copy
+
+**<https://igloo-inc-recreation.vercel.app>**
+
+Static, no build step. To redeploy after changes:
+
+```bash
+npx vercel deploy recreation --prod --project igloo-inc-recreation --create-if-missing
+```
+
+`recreation/vercel.json` adds the SPA fallback and marks hashed `/assets/*` as
+immutable. The deployment is unlisted but **publicly reachable** — see [Legal](#-legal).
 
 ---
 
@@ -207,6 +221,7 @@ No transpiling, no bundling, no dependency tree — the artifact *is* the app.
 | Audio assets present | ✅ | 18 OGG files, worker + worklet shipped |
 | Audio playback | ⚠️ | browser autoplay policy requires a user gesture |
 | Scroll / project transitions | ⚠️ | handlers ship in the bundle; parity run still pending |
+| Vercel deployment | ✅ | all 109 files byte-identical; scene renders on hardware WebGL |
 | Backend / analytics | ❌ | intentionally not mirrored |
 
 Where something is marked ⚠️, the code is present but the behavior has not been
@@ -236,7 +251,8 @@ compressed, and the whole world fits in less than 20 MB.
 - **Desktop-first.** The original experience targets pointer + WebGL2; mobile parity
   was not evaluated here.
 - **No CI.** This is a preservation snapshot, not a maintained product.
-- **Private by design.** The repo is private because the assets are not ours.
+- **Private repo, public URL.** The source is private; the Vercel deployment is
+  unlisted but publicly reachable.
 - **Hashes are frozen.** Updating the mirror means re-capturing, not patching.
 
 ---
@@ -249,7 +265,8 @@ audio, fonts and trademarks. Those assets remain the property of Igloo Inc. and 
 respective licensors.
 
 - No license is granted for the captured assets.
-- Do not redistribute, rebrand, or deploy this publicly.
+- Do not redistribute or promote this mirror; the unlisted Vercel URL exists for
+  private review only.
 - No affiliation with or endorsement by Igloo Inc. is claimed.
 - If you are a rights holder and want something removed, open an issue.
 
