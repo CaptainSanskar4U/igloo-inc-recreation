@@ -1,0 +1,18 @@
+{
+  "name": "igloo-inc-recreation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline, self-contained mirror of the igloo.inc WebGL homepage",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve-recreation.mjs"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CaptainSanskar4U/igloo-inc-recreation.git"
+  },
+  "author": "CaptainSanskar4U"
+}
