@@ -43,7 +43,8 @@
 
 ```bash
 # from the repo root — no npm install, no build step
-node scripts/serve-recreation.mjs
+npm start
+# or: node scripts/serve-recreation.mjs
 ```
 
 Then open **http://localhost:3000/**.
