@@ -252,8 +252,8 @@ compressed, and the whole world fits in less than 20 MB.
 - **Desktop-first.** The original experience targets pointer + WebGL2; mobile parity
   was not evaluated here.
 - **No CI.** This is a preservation snapshot, not a maintained product.
-- **Private repo, public URL.** The source is private; the Vercel deployment is
-  unlisted but publicly reachable.
+- **Public preservation mirror.** The repository is public; the static deployment
+  is hosted on Vercel.
 - **Hashes are frozen.** Updating the mirror means re-capturing, not patching.
 
 ---
